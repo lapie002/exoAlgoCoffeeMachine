@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coofee Machine</title>
+    <link rel="stylesheet" href="coffee.css">
+</head>
+<body onLoad="initialisation()">
+  <div id='page'>
+    <h1>Coffee Machine</h1>
+    <form name='coffee' action="poorcoffee">
+      <table id="t_coffee">
+        <tr>
+            <td colspan="3">
+                <input type="text" readonly="readonly" name="afficheur" id="afficheur">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="text" name="coin" id="coinslot">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+               <input type="button" value="Insert coin" onClick="addCoin();" id="coin">
+             </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="café court" onClick="saisie('1');"> </td>
+            <td> <input type="button" value="café au lait" onClick="saisie('2');"> </td>
+            <td> <input type="button" value="café long" onClick="saisie('3');"> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="Oui" onClick="sucre('oui');"> </td>
+            <td> <input type="button" value="Non" onClick="sucre('non');"> </td>
+            <td> <input type="button" value="Annuler" onClick="sucre('cancel');"> </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+<!-- Mon fichier coffee.js -->
+<script src="coffee.js" type="text/javascript" language="JavaScript"></script>
+</body>
+</html>
