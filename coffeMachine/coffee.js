@@ -12,7 +12,7 @@ var coinsInserted = [];
 //  tableau des pieces acceptes
 var pieceAccepte = ['0.10','0.1','0.20','0.2','0.5','0.50','1.00','1.0','1','2.00','2.0','2'];
 //nombre de goblets max
-var nbGoblets = 1;
+var nbGoblets = 11;
 
 // montat des pieces mises dans la machine - erreur avec somme
 var resteMonnaie;
@@ -36,7 +36,12 @@ function getCoin() {
 
 // Initialisation
 function initialisation() {
-  // coffeeAfficheur().value = "du cafe au lait";
+
+  // ajouetr un while pour afficher les messages d acceuil
+  setTimeout(function(){ coffeeAfficheur().value = "cafe court 1 euro - cafe au lait 1.50 - cafe long 1.20 euros"; }, 1000);
+  setTimeout(function(){ coffeeAfficheur().value = "veuillez insérer votre monnaie."; }, 3000);
+  setTimeout(function(){ coffeeAfficheur().value = "Pièces acceptées : 10, 20 et 50 centimes et de 1 et 2 euros."; }, 5000);
+
 }
 
 //piece acceptes
@@ -191,7 +196,7 @@ function sucre(val) {
           // on decremente goblets
           nbGoblets--;
           setTimeout(function(){ coffeeAfficheur().value = "préparation en cours"; }, 1000);
-          setTimeout(function(){ coffeeAfficheur().value = "veuillez prendre votre boisson : "+caffeSelectionne; }, 4000);
+          setTimeout(function(){ coffeeAfficheur().value = "veuillez prendre votre boisson : "+caffeSelectionne; }, 3000);
           // faire le rendu monnaie si il y en a un.
           if(resteMonnaie!=0){
             setTimeout(function(){ coffeeAfficheur().value = "rendu monaie  : " + resteMonnaie; }, 5000);
